@@ -173,12 +173,12 @@ body {
     font-weight: 500;
     height: 30px;
     width: 45px;
-    color: #fff;
+    color: #430f58;
     border-radius: 5px;
     line-height: 30px;
     text-align: center;
-    background: #430f58;
-    border: 1px solid #430f58;
+    background: rgb(5, 178, 221);
+    border: 1px solid rgb(5, 178, 221);
     user-select: none;
 }
 
@@ -187,7 +187,7 @@ body {
     bottom: 0px;
     left: 0px;
     height: 3px;
-    background: #0c016b;
+    background: rgb(5, 178, 221);
 }
 
 section {
@@ -227,6 +227,8 @@ section .option_list .option:hover {
     color: #004085;
     background: #cce5ff;
     border: 1px solid #b8daff;
+    box-shadow: 0 0 10px 0.1em #004085;
+
 }
 
 section .option_list .option.correct {
@@ -281,6 +283,7 @@ footer {
 footer .total_que span {
     display: flex;
     user-select: none;
+    color: white;
 }
 
 footer .total_que span p {
@@ -290,6 +293,32 @@ footer .total_que span p {
 
 footer .total_que span p:first-child {
     padding-left: 0px;
+}
+
+.score_count {
+    background-color: rgb(148, 7, 117);
+    color: white;
+    height: 45px;
+    padding: 0 8px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 145px;
+}
+
+.score_value {
+    background-color: rgb(5, 178, 221);
+    display: inline;
+    color: #430f58;
+    font-size: 18px;
+    font-weight: 500;
+    height: 30px;
+    width: 45px;
+    border-radius: 5px;
+    line-height: 30px;
+    user-select: none;
+    text-align: center;
 }
 
 footer button {
@@ -304,6 +333,7 @@ footer button {
     border-radius: 5px;
     background: #5e1976;
     border: 1px solid #007bff;
+    box-shadow: 0 0 10px 0.1em #007bff;
     line-height: 10px;
     opacity: 0;
     pointer-events: none;
@@ -322,7 +352,8 @@ footer button.show {
 }
 
 .result_box {
-    background: #fff;
+    background: white;
+    box-shadow: 0 0 30px 2em #0263ca;
     border-radius: 5px;
     display: flex;
     padding: 25px 30px;
@@ -345,6 +376,7 @@ footer button.show {
 .result_box .complete_text {
     font-size: 20px;
     font-weight: 500;
+
 }
 
 .result_box .score_text span {
@@ -352,11 +384,13 @@ footer button.show {
     margin: 10px 0;
     font-size: 18px;
     font-weight: 500;
+
 }
 
 .result_box .score_text span p {
     padding: 0 4px;
     font-weight: 600;
+
 }
 
 .result_box .buttons {
@@ -385,6 +419,7 @@ footer button.show {
 
 .buttons button.restart:hover {
     background: #0263ca;
+    box-shadow: 0 0 10px 0.1em #0263ca;
 }
 
 .buttons button.quit {
@@ -395,4 +430,6 @@ footer button.show {
 .buttons button.quit:hover {
     color: #fff;
     background: #007bff;
+    box-shadow: 0 0 10px 0.1em #007bff;
+
 }
