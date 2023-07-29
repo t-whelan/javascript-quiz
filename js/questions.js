@@ -48,7 +48,7 @@ let questions = [
     {
     numb: 5,
     question: "What does the '=== operator' do in JavaScript?",
-    answer: " Checks if two values are equal in both value and data type",
+    answer: "Checks if two values are equal in both value and data type",
     options: [
       "Assigns a value to a variable",
       "Checks if two values are equal in both value and data type",
@@ -60,7 +60,7 @@ let questions = [
   {
     numb: 6,
     question: "How do you add a comment in JavaScript?",
-    answer: "// This is a comment",
+    answer: "//This is a comment",
     options: [
       "/* This is a comment */",
       "//This is a comment",
