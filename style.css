@@ -384,13 +384,18 @@ footer button.show {
     margin: 10px 0;
     font-size: 18px;
     font-weight: 500;
-
+    align-items: center;
+    justify-content: center;
 }
 
 .result_box .score_text span p {
     padding: 0 4px;
     font-weight: 600;
 
+}
+
+.result_box .score_text span .len{
+    margin-right: -3.5px;
 }
 
 .result_box .buttons {

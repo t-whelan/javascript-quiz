@@ -49,6 +49,7 @@ const quit_quiz = result_box.querySelector(".buttons .quit");
 restart_quiz.onclick = ()=>{
     quiz_box.classList.add("activeQuiz"); //show quiz box
     result_box.classList.remove("activeResult"); //hide result box
+    document.querySelector('.score_value').innerText = 0; // score value reset
     timeValue = 15; 
     que_count = 0;
     que_numb = 1;
@@ -98,11 +99,11 @@ function showQuetions(index){
     const que_text = document.querySelector(".que_text");
 
     //creating a new span and div tag for question and option and passing the value using array index
-    let que_tag = '<span>'+ questions[index].numb + ". " + questions[index].question +'</span>';
-    let option_tag = '<div class="option"><span>'+ questions[index].options[0] +'</span></div>'
-    + '<div class="option"><span>'+ questions[index].options[1] +'</span></div>'
-    + '<div class="option"><span>'+ questions[index].options[2] +'</span></div>'
-    + '<div class="option"><span>'+ questions[index].options[3] +'</span></div>';
+    let que_tag = `<span>${questions[index].numb}. ${questions[index].question}</span>`;
+    let option_tag = `<div class="option"><span>${questions[index].options[0]}</span></div>
+                      <div class="option"><span>${questions[index].options[1]}</span></div>
+                      <div class="option"><span>${questions[index].options[2]}</span></div>
+                      <div class="option"><span>${questions[index].options[3]}</span></div>`;
     que_text.innerHTML = que_tag; //adding new span tag inside que_tag
     option_list.innerHTML = option_tag; //adding new div tag inside option_tag
     
@@ -114,8 +115,8 @@ function showQuetions(index){
     }
 }
 // creating the new div tags which for icons
-let tickIconTag = '<div class="icon tick"><i class="fas fa-check"></i></div>';
-let crossIconTag = '<div class="icon cross"><i class="fas fa-times"></i></div>';
+let tickIconTag = `<div class="icon tick"><i class="fas fa-check"></i></div>`;
+let crossIconTag = `<div class="icon cross"><i class="fas fa-times"></i></div>`;
 
 //if user clicked on option
 function optionSelected(answer){
@@ -161,17 +162,19 @@ function showResult(){
     const scoreText = result_box.querySelector(".score_text");
     if (userScore >= 5){ // if user scored more than 5
         //creating a new span tag and passing the user score number and total question number
-        let scoreTag = '<span>and congrats! 🎉, You got <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
+        let scoreTag = `<span>and congrats! 🎉, You got <p>${userScore}</p> out of <p class="len">${questions.length}</p>.</span>`;
         scoreText.innerHTML = scoreTag;  //adding new span tag inside score_Text
         redo.innerHTML = "Replay Quiz"
     }
     else if(userScore > 1 && userScore < 5){ // if user scored more than 1 and less than 5
-        let scoreTag = '<span>and nice 😎, You got '+ userScore +' out of '+ questions.length +'.Please try again</span>';
+        let scoreTag = `<span>and nice 😎, You got <p>${userScore}</p> out of <p class="len">${questions.length}</p>.</span>
+                        <span>Please try again</span>`;
         scoreText.innerHTML = scoreTag;
         redo.innerHTML = "Try again"
     }
-    else{ // if user scored less than 1
-        let scoreTag = '<span>and sorry 😐, You got only '+ userScore +' out of '+ questions.length +'.Please try again</span>';
+    else{ // if user scored 1 or 0
+        let scoreTag = `<span>and Sorry 😐, You got only <p>${userScore}</p> out of <p class="len">${questions.length}</p>.</span>
+                        <span>Please try again</span>`;
         scoreText.innerHTML = scoreTag;
         redo.innerHTML = "Try again"
     }
@@ -219,7 +222,7 @@ function startTimerLine(time){
 
 function queCounter(index){
     //creating a new span tag and passing the question number and total question
-    let totalQueCounTag = '<span><p>'+ index +'</p> of <p>'+ questions.length +'</p> Questions</span>';
+    let totalQueCounTag = `<span><p>${index}</p> of <p>${questions.length}</p> Questions</span>`;
     bottom_ques_counter.innerHTML = totalQueCounTag;  //adding new span tag inside bottom_ques_counter
 }
 
