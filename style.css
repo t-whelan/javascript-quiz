@@ -41,7 +41,7 @@ body {
 .start_btn button {
     font-size: 25px;
     font-weight: 500;
-    color: white;
+    color: #fff;
     padding: 15px 30px;
     outline: none;
     border: none;
@@ -57,7 +57,7 @@ body {
 
 .info_box {
     width: 540px;
-    color: white;
+    color: #fff;
     text-shadow: 2px 2px 5px rgb(5, 178, 221);
     background: #430f58;
     box-shadow: 0 0 30px 2em rgb(148, 7, 117);
@@ -144,12 +144,12 @@ body {
 .quiz_box header .title {
     font-size: 20px;
     font-weight: 600;
-    color: white;
+    color: #fff;
     text-shadow: 2px 2px 5px rgb(5, 178, 221);
 }
 
 .quiz_box header .timer {
-    color: white;
+    color: #fff;
     background: rgb(148, 7, 117);
     border: 1px solid rgb(148, 7, 117);
     box-shadow: 0 0 10px 0.1em rgb(148, 7, 117);
@@ -198,6 +198,8 @@ section {
 section .que_text {
     font-size: 25px;
     font-weight: 600;
+    color: #add8e6;
+    text-shadow: 1px 1px #faebd7;
 }
 
 section .option_list {
@@ -206,7 +208,7 @@ section .option_list {
 }
 
 section .option_list .option {
-    background: aliceblue;
+    background: #f0f8ff;
     border: 1px solid #84c5fe;
     border-radius: 5px;
     padding: 8px 15px;
@@ -283,7 +285,7 @@ footer {
 footer .total_que span {
     display: flex;
     user-select: none;
-    color: white;
+    color: #fff;
 }
 
 footer .total_que span p {
@@ -297,7 +299,7 @@ footer .total_que span p:first-child {
 
 .score_count {
     background-color: rgb(148, 7, 117);
-    color: white;
+    color: #fff;
     height: 45px;
     padding: 0 8px;
     border-radius: 5px;
@@ -352,7 +354,7 @@ footer button.show {
 }
 
 .result_box {
-    background: white;
+    background: #fff;
     box-shadow: 0 0 30px 2em #0263ca;
     border-radius: 5px;
     display: flex;
@@ -437,4 +439,310 @@ footer button.show {
     background: #007bff;
     box-shadow: 0 0 10px 0.1em #007bff;
 
+}
+
+/* MEDIA QUERIES */
+/* for a maximum screen size of 780px */
+@media only screen and (max-width: 780px) {
+    .start_btn button {
+        font-size: 19px;
+    }
+
+    .info_box {
+        width: 480px;
+        box-shadow: 0 0 10px 1em rgb(148, 7, 117);
+    }
+    
+    .info_box .buttons {
+        margin-right: 20%;
+    }
+
+    .quiz_box {
+        width: 490px;
+        box-shadow: 0 0 10px 1em rgb(148, 7, 117);
+    }
+    
+    .quiz_box header .title {
+        text-shadow: 2px 2px rgb(148, 7, 117);
+    }
+
+    .quiz_box header .time_line {
+        visibility: hidden;
+    }
+
+    .quiz_box header {
+        border-bottom: 2px solid #f0ffff;
+    }
+
+    section .que_text {
+        font-size: 22px;
+        text-shadow: 1px 1px transparent;
+    }
+
+    .result_box {
+        width: 400px;
+        box-shadow: 0 0 10px 1.2em #0263ca;
+    }
+
+    .result_box .icon {
+        font-size: 80px;
+    }
+    
+    .result_box .complete_text {
+        font-size: 16px;
+    }
+    
+    .result_box .score_text span {
+        font-size: 15px;
+    }
+    
+    .result_box .buttons button {
+        height: 35px;
+    }
+    
+    .result_box .buttons button.restart {
+        font-size: 15px;
+    }
+
+    .result_box .buttons button.quit {
+        font-size: 15px;
+    }
+}
+
+/* for a maximum screen size of 540px */
+@media only screen and (max-width: 540px) {
+    .start_btn button {
+        font-size: 15px;
+        border-radius: 7px;
+    }
+
+    .start_btn:hover {
+        box-shadow: 2px 2px 4px rgb(11, 176, 182), 5px 5px 4px rgb(255, 0, 200), 10px 10px 4px rgb(0, 2, 128);
+    }
+
+    .info_box {
+        width: 300px;
+        box-shadow: 0 0 15px 0.5em rgb(148, 7, 117);
+    }
+
+    .info_box .info-title {
+        height: 40px;
+        font-size: 17px;
+    }
+
+    .info_box .info-list .info {
+        font-size: 15px;
+    }
+    
+    .info_box .buttons {
+        margin-right: 5%;
+    }
+
+    .quiz_box {
+        width: 320px;
+        box-shadow: 0 0 15px 0.5em rgb(148, 7, 117);
+    }
+    
+    .quiz_box header .title {
+        font-size: 17px;
+        text-shadow: 1px 1px rgb(148, 7, 117);
+    }
+
+    .quiz_box header .timer {
+        width: 110px;
+        height: 35px;
+    }
+    
+    .quiz_box header .timer .time_left_txt {
+        font-size: 12px;
+    }
+
+    .quiz_box header .timer .timer_sec {
+        font-size: 14px;
+        height: 30px;
+        width: 35px;
+    }
+    
+    section .que_text {
+        font-size: 17px;
+    }
+
+    section .option_list .option {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    section .option_list .option .icon {
+        height: 23px;
+        width: 23px;
+        border: 1px solid transparent;
+        font-size: 10px;
+    }
+
+    footer {
+        display: grid;
+        margin-bottom: 110px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer .total_que {
+        margin-left: 10%;
+    }
+
+    footer .total_que,
+    .score_count {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    
+    footer button {
+        font-size: 15px;
+    }
+
+    .result_box {
+        width: 280px;
+        box-shadow: 0 0 15px 0.5em #0263ca;
+    }
+
+    .result_box .icon {
+        font-size: 60px;
+    }
+    
+    .result_box .complete_text {
+        font-size: 13px;
+    }
+    
+    .result_box .score_text span {
+        font-size: 12px;
+    }
+    
+    .result_box .buttons button {
+        height: 25px;
+    }
+    
+    .result_box .buttons button.restart,
+    .result_box .buttons button.quit {
+        font-size: 10px;
+    }
+}
+
+/* for a maximum screen size of 360px */
+@media only screen and (max-width: 360px){
+    .start_btn {
+        height: 20px;
+    }
+
+    .start_btn button {
+        font-size: 12px;
+    }
+
+    .info_box {
+        width: 260px;
+        box-shadow: 0 0 10px 0.3em rgb(148, 7, 117);
+    }
+
+    .info_box .info-title {
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .info_box .info-list .info {
+        font-size: 12px;
+    }
+    
+    .info_box .buttons {
+        margin-left: 3%;
+    }
+
+    .info_box .buttons button {
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .quiz_box {
+        width: 265px;
+        box-shadow: 0 0 10px 0.3em rgb(148, 7, 117);
+    }
+
+    .quiz_box header .title {
+        font-size: 14px;
+    }
+
+    .quiz_box header .timer {
+        width: 80px;
+        height: 25px;
+    }
+    
+    .quiz_box header .timer .time_left_txt {
+        font-size: 9px;
+    }
+
+    .quiz_box header .timer .timer_sec {
+        height: 23px;
+        width: 25px;
+    }
+    
+    section .que_text {
+        font-size: 14px;
+    }
+
+    section .option_list .option {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+
+    section .option_list .option .icon {
+        height: 21px;
+        width: 21px;
+    }
+
+    footer {
+        margin-bottom: 70px;
+    }
+
+    footer .total_que {
+        margin-left: 15%;
+    }
+
+    footer .total_que,
+    .score_count {
+        font-size: 12px;
+    }
+    
+    footer .score_count {
+        height: 40px;
+    }
+
+    footer .score_count .score_value {
+        height: 30px;
+        width: 30px;
+    }
+
+    footer button {
+        font-size: 10px;
+        height: 20px;
+    }
+
+    .result_box {
+        width: 240px;
+        box-shadow: 0 0 10px 0.3em #0263ca;
+    }
+
+    .result_box .icon {
+        font-size: 40px;
+    }
+    
+    .result_box .complete_text {
+        font-size: 11px;
+    }
+    
+    .result_box .score_text span {
+        font-size: 10px;
+    }
+    
+    .result_box .buttons button {
+        height: 20px;
+        width: 100px;
+    }
 }

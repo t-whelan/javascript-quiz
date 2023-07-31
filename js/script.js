@@ -168,15 +168,15 @@ function showResult(){
     }
     else if(userScore > 1 && userScore < 5){ // if user scored more than 1 and less than 5
         let scoreTag = `<span>and nice 😎, You got <p>${userScore}</p> out of <p class="len">${questions.length}</p>.</span>
-                        <span>Please try again</span>`;
+                        <span>Please try again.</span>`;
         scoreText.innerHTML = scoreTag;
-        redo.innerHTML = "Try again"
+        redo.innerHTML = "Try Again"
     }
     else{ // if user scored 1 or 0
         let scoreTag = `<span>and Sorry 😐, You got only <p>${userScore}</p> out of <p class="len">${questions.length}</p>.</span>
-                        <span>Please try again</span>`;
+                        <span>Please try again.</span>`;
         scoreText.innerHTML = scoreTag;
-        redo.innerHTML = "Try again"
+        redo.innerHTML = "Try Again"
     }
 }
 
@@ -210,10 +210,10 @@ function startTimer(time){
 }
 
 function startTimerLine(time){
-    counterLine = setInterval(timer, 29);
+    counterLine = setInterval(timer, 29); 
     function timer(){
         time += 1; //upgrading time value with 1
-        time_line.style.width = time + "px"; //increasing width of time_line with px by time value
+        time_line.style.width = `${time}px`; //increasing width of time_line with px by time value
         if(time > 549){ //if time value is greater than 549
             clearInterval(counterLine); //clear counterLine
         }

@@ -14,7 +14,7 @@ let questions = [
   },
     {
     numb: 2,
-    question: "Which function is used to print Something to the console?",
+    question: "Which function is used to print something to the console?",
     answer: "console.log()",
     options: [
       "print()",
@@ -25,7 +25,7 @@ let questions = [
   },
     {
     numb: 3,
-    question: "What will be the result of the following: var x = 5; console.log(x + '2')?",
+    question: "What will be the result of the following: var x = 5; console.log(x + '2');?",
     answer: " '52' ",
     options: [
       "52",
@@ -36,7 +36,7 @@ let questions = [
   },
   {
     numb: 4,
-    question: "How do you check if a variable is a type string 'string' in Javascript?",
+    question: "In JavaScript, how do you check if a variable is of the type string?",
     answer: "typeof(myVar)==='string'",
     options: [
       "myVar.type==''string'",
